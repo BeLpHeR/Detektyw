@@ -50,7 +50,7 @@ assert len(PIERWSZE_LITERY_MIEJSC.keys()) == len(MIEJSCA)
 
 
 znaniPodejrzaniIMiejsca = []
-# Słownik odwiedzonych miejsc (visitedPlaces), gdzie kluczami są miejsca, a  wartościami podejrzani i przedmioty, które tam się znajdują.
+# Słownik odwiedzonych miejsc, gdzie kluczami są miejsca, a  wartościami podejrzani i przedmioty, które tam się znajdują.
 odwiedzoneMiejsca = {}
 aktualneMiejsce = 'TAXI'  # Rozpocznij grę na postoju taksówek.
 obrazeniPodejrzai = []  # Oskarżeni podejrzani nie będą dawać wskazówek.
@@ -65,7 +65,7 @@ random.shuffle(MIEJSCA)
 
 # Utwórz strukturę danych dla wskazówek o przedmiocie i podejrzanym,
 # podanych przez osoby prawdomówne.
-# Słownik ze wskazówkami (clues), gdzie klucze to podejrzani proszeni o wskazówkę, a wartościami słownik z daną wskazówką.
+# Słownik ze wskazówkami, gdzie klucze to podejrzani proszeni o wskazówkę, a wartościami słownik z daną wskazówką.
 wskazowki = {}
 for i, przesluchiwany in enumerate(PODEJRZANI):
     if przesluchiwany in klamcy:
@@ -164,12 +164,6 @@ for przesluchiwany in random.sample(PODEJRZANI, random.randint(3, 4)):
                 if kocieWskazowki[przesluchiwany] != PRZEDMIOTY[PODEJRZANI.index(sprawca)]:
                     # Wyjdź z pętli, gdy zostanie wybrana błędna wskazówka.
                     break
-
-# EKSPERYMENT: Usuń znaczniki komentarz z przed tego bloku kodu, by zobaczyć strukturę danych dla wskazówek:
-#import pprint
-#pprint.pprint(clues)
-#pprint.pprint(MruczekekClues)
-#print('culprit =', culprit)
 
 # POCZĄTEK GRY
 print("""OSKARŻAM! (gra detektywistyczna)")
