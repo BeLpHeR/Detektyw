@@ -4,7 +4,7 @@ import time, random, sys
 PODEJRZANI = [
     'SPRZEDAWCA CIASTEK',
     'NOWORUDZKI PATRIOTA',
-    'PAN Z URZĘDU',
+    'URZĘDNIK GMINNY',
     'RADNY MIEJSKI',
     'PISARZ',
     'DENTYSTA',
@@ -26,10 +26,10 @@ MIEJSCA = [
     'SPALONY SZPITAL', 
     'ROSSMANN', 
     'URZĄD MIASTA', 
-    'KAWIARNIA', 
+    'BIAŁA LOKOMOTYWA', 
     'NOWAR', 
     'LICEUM', 
-    'BIBLIOTEKA', 
+    'DINO', 
     'POCZTA GŁÓWNA']
 CZAS_GRY = 600  # 600 sekund (10 minut) na rozwiązanie zagadki.
 
