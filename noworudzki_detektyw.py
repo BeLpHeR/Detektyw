@@ -194,11 +194,13 @@ while True:  # Główna pętla gry.
         # Obsługa warunku końca gry:
         if time.time() > CzasKoncowy:
             print('Skończył Ci się czas!')
+            x=input('Naciśnij ENTER, aby wyjść.')
         elif doOskarzenia == 0:
             print('Oskarżyłeś zbyt wielu niewinnych ludzi!')
         IndeksOskarzonych = PODEJRZANI.index(sprawca)
         print('Kota porwał {} w miejscu: {} z: {}!'.format(sprawca, MIEJSCA[IndeksOskarzonych], PRZEDMIOTY[IndeksOskarzonych]))
         print('Może następnym razem będziesz miał więcej szczęścia, Detektywie.')
+        x=input('Naciśnij ENTER, aby wyjść.')
         sys.exit()
 
     print()
@@ -222,6 +224,7 @@ while True:  # Główna pętla gry.
                 continue  # Zapytaj ponownie.
             if odpowiedz == 'K':
                 print('Dziękujemy za grę!')
+                x=input('Naciśnij ENTER, aby wyjść.')
                 sys.exit()
             if odpowiedz in PIERWSZE_LITERY_MIEJSC.keys():
                 break
@@ -277,6 +280,7 @@ while True:  # Główna pętla gry.
             minutesTaken = int(time.time() - CzasPoczatkowy) // 60
             secondsTaken = int(time.time() - CzasPoczatkowy) % 60
             print('Dobra robota! Rozwiązałeś sprawę w {} min, {} sek.'.format(minutesTaken, secondsTaken))
+            x=input('Naciśnij ENTER, aby wyjść.')
             sys.exit()
         else:
             # Gracz niesłusznie oskarżył daną osobę.
